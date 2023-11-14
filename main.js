@@ -143,6 +143,13 @@ posts.forEach((e) => {
     like_button.classList.add("js-like-button");
     like_button.href = "#";
     like_button.setAttribute("data-postid", "1");
+
+    like_button.addEventListener("click", ()=>{
+        const testo = like_button.childNodes[1];
+        testo.style.color = "blue";
+        like_button.style.color = "blue";
+    })
+
     likes_cta.appendChild(like_button);
 
     const i_like = document.createElement("i");
